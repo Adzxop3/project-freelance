@@ -1,0 +1,45 @@
+.manage-apps-container {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding: 1rem;
+  }
+  
+  .error-msg {
+    color: #c00;
+  }
+  
+  .apps-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .app-item {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    transition: background-color 0.2s;
+  }
+  
+  .app-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .app-header h3 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.2rem;
+    color: #0056b3;
+  }
+  
+  .app-candidate {
+    color: #555;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .app-body p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+  }
+  

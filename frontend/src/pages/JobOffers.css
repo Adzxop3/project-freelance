@@ -1,0 +1,66 @@
+.indeed-container {
+    max-width: 1200px;
+    margin: 1rem auto;
+  }
+  
+  .indeed-content {
+    display: flex;
+    gap: 1rem;
+    min-height: 60vh;
+  }
+  
+  .indeed-left {
+    width: 40%;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .indeed-right {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .job-item {
+    border: 1px solid #eee;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+  }
+  
+  .job-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .detail-card {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 1rem;
+  }
+  
+  .company {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.3rem;
+  }
+  
+  .snippet {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.2rem;
+  }
+  
+  .posted {
+    font-size: 0.8rem;
+    color: #999;
+  }
+  
+  .no-selection {
+    color: #666;
+    margin-top: 1rem;
+  }
+  

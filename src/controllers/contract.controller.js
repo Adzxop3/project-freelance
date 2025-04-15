@@ -1,0 +1,27 @@
+const PDFDocument = require('pdfkit')
+const fs = require('fs')
+const path = require('path')
+
+exports.generateContract = (application, callback) => {
+  const doc = new PDFDocument()
+  const contractDir = path.join(__dirname, '../../public/contracts')
+  if (!fs.existsSync(contractDir)) fs.mkdirSync(contractDir, { recursive: true })
+  const fileName = `contract_${application._id}.pdf`
+  const filePath = path.join(contractDir, fileName)
+  const stream = fs.createWriteStream(filePath)
+  doc.pipe(stream)
+  doc.fontSize(20).text('Contrat de Prestation', { align: 'center' })
+  doc.moveDown()
+  doc.fontSize(14).text(`Offre : ${application.jobId?.title || 'N/A'}`)
+  doc.moveDown()
+  doc.text(`Freelancer : ${application.freelancerId?.email || 'N/A'}`)
+  doc.moveDown()
+  doc.text(`Employeur : ${application.employerId?.toString() || 'N/A'}`)
+  doc.moveDown()
+  doc.text(`Prix proposé : ${application.price} €`)
+  doc.moveDown()
+  doc.text(`Statut : ${application.status}`)
+  doc.end()
+  stream.on('finish', () => { callback(null, `/contracts/${fileName}`) })
+  stream.on('error', err => { callback(err) })
+}

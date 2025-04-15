@@ -1,0 +1,35 @@
+.my-sent-container {
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+  
+  .my-sent-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .my-sent-item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: background 0.2s;
+  }
+  
+  .my-sent-item:hover {
+    background: #f9f9f9;
+  }
+  
+  .offer-info h3 {
+    margin: 0 0 0.3rem 0;
+    color: #0056b3;
+  }
+  
+  .application-info p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+  }
+  
